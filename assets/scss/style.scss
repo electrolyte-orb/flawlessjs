@@ -1,0 +1,87 @@
+body {
+    font-family: 'Inter';
+    margin: 0;
+}
+h1, h2, h3 {
+    font-weight: 300;
+}
+.test {
+    height: 500px
+}
+$tor-blue:#00BCD4;
+.root {
+    .container {
+        .header {
+            height: 100vh;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .head-txt {
+                font-size: 100px;
+                background-image: linear-gradient(to bottom,$tor-blue 10%, black 10% 90%, $tor-blue 90%);
+                margin: 10px;
+                animation: gradAni1 2s infinite;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+        .contents {
+            padding: 10px;
+            background: $tor-blue;
+            color: black;
+
+            .contents-anim {
+                color: black !important;
+                transition: .5s;
+                animation: slidein 1s forwards;
+            }
+        }
+    }
+}
+// animations 
+@keyframes gradAni1 {
+    0% {
+        text-shadow: 0 0 0px $tor-blue;
+    } 50% {
+        text-shadow: 0 0 20px $tor-blue;
+    }
+}
+@keyframes slidein {
+    from {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+// making the page responsive
+@media only screen and (max-width: 700px) {
+    .root {
+        .container {
+            .header {
+                .head-txt {
+                    font-size: 50px;
+                    overflow-wrap: anywhere;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 310px) {
+    .root {
+        .container {
+            .header {
+                .head-txt {
+                    font-size: 30px;
+                    overflow-wrap: anywhere;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

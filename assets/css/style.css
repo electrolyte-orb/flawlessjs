@@ -1,0 +1,84 @@
+body {
+  font-family: 'Inter';
+  margin: 0; }
+
+h1, h2, h3 {
+  font-weight: 300; }
+
+.test {
+  height: 500px; }
+
+.root .container .header {
+  height: 100vh;
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .root .container .header .head-txt {
+    font-size: 100px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #00BCD4), color-stop(10%, black), color-stop(90%, #00BCD4));
+    background-image: linear-gradient(to bottom, #00BCD4 10%, black 10% 90%, #00BCD4 90%);
+    margin: 10px;
+    -webkit-animation: gradAni1 2s infinite;
+            animation: gradAni1 2s infinite;
+    padding: 10px;
+    border-radius: 10px; }
+.root .container .contents {
+  padding: 10px;
+  background: #00BCD4;
+  color: black; }
+  .root .container .contents .contents-anim {
+    color: black !important;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-animation: slidein 1s forwards;
+            animation: slidein 1s forwards; }
+
+@-webkit-keyframes gradAni1 {
+  0% {
+    text-shadow: 0 0 0px #00BCD4; }
+  50% {
+    text-shadow: 0 0 20px #00BCD4; } }
+
+@keyframes gradAni1 {
+  0% {
+    text-shadow: 0 0 0px #00BCD4; }
+  50% {
+    text-shadow: 0 0 20px #00BCD4; } }
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+@keyframes slidein {
+  from {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+@media only screen and (max-width: 700px) {
+  .root .container .header .head-txt {
+    font-size: 50px;
+    overflow-wrap: anywhere;
+    text-align: center; } }
+@media only screen and (max-width: 310px) {
+  .root .container .header .head-txt {
+    font-size: 30px;
+    overflow-wrap: anywhere;
+    text-align: center; } }
+
+/*# sourceMappingURL=style.css.map */
